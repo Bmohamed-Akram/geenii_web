@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEENII web solutions</title>
+    <link rel="stylesheet" href="{% static 'Home/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Home/style2.css' %}">
+    <link rel="stylesheet" href="{% static 'Home/logo.css' %}">
+    <link rel="stylesheet" href="{% static 'lstbr.css' %}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body id="body">
+    <div class="title">
+        <div id="logo1">
+            <div class="name" id="logo">
+                <img src="{% static 'Home/images/insta.png' %}" id="pic">
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <h2>GEENII web solutions</h2>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <svg id="btn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" id="tlist"><a href="/Blog" class="nav-link" id="tlink">BLOG</a></li>
+                {% if user.is_authenticated %}
+                <li class="nav-item" id="tlist"><a href="/Logout" class="nav-link" id="tlink">LOG-OUT</a></li>
+                {% else %}
+                <li class="nav-item" id="tlist"><a href="/Login" class="nav-link" id="tlink">LOG-IN</a></li>
+                {% endif %}
+                <li class="nav-item" id="tlist"><a href="/class" class="nav-link" id="tlink">COURSES</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    
+    <section id="home">
+        <div class="row" id="about">
+            <div class="col-lg-6 col-md-12 col-sm-12 order-1" data-aos="fade-up" data-aos-duration="1000">
+                
+                <p class="my-lg-2 my-3 eng" id="econtent">
+                    {% if user.is_authenticated %}
+                    <h1>Hey, {{user.username}}</h1>
+                    {% else %}
+                    <h1>Hey there ...</h1>
+                    {% endif %}
+                    <p id="apera">
+                        we are developers, do you have a business ? good.
+                         This is the place for your business website , 
+                         you can get better websites for low price here &
+                          this is the site for 
+                        students who are interested in web development
+                    </p>
+                <h3>GEENII Solutions</h3>
+                <div id="contactlk">
+                    <a href=""><img src="{% static 'Home/images/fb.png' %}" class="cicon"></a>
+                    <a href=""><img src="{% static 'Home/images/wapp.png' %}" class="cicon"></a>
+                    <a href=""><img src="{% static 'Home/images/twtr.png' %}" class="cicon"></a>
+                    <a href=""><img src="{% static 'Home/images/inst.png' %}" class="cicon"></a>
+                </div>
+
+            </div>
+            
+            <div class="col-lg-6 col-md-12 col-sm-12 py-lg-0 py-3 order-sm-2" id="pad" data-aos="fade-up" data-aos-duration="1000">
+                <img src="{% static 'Home/images/abut.png' %}" class="img-fluid">            
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="mar">
+        <div class="web" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="sub cap">Web developing & Designing</h2>
+            <br>
+            <p class="bpera">
+                <b class="cap">We creating 2 types of Websites. Such are,</b> <br> 
+                <div class="sec">
+                    <b class="cap">Website with normal back-end</b>
+                    We will design a website with a control panel which can 
+                    control your website by you at anytime, 
+                    you can upload or change the contents of your website 
+                </div>
+                <br><br>
+                <div class="sec">
+                    <b class="cap">Front-end sites</b>
+                    This is the website which is designed at the first time by your ideas. 
+                    It will not have a control panel, so you can't control the website or 
+                    change the contents by yourself
+                </div>
+            </p>
+        </div>
+        <div id="special">
+            <div class="str" data-aos="fade-up" data-aos-duration="1000">
+                <img src="{% static 'Home/images/security.png' %}" class="img-fluid strimg">
+                <h3>Security</h3>
+                <p>
+                    We create your websites with high security system. 
+                    The sensitive datas of user will be secured and we ensure 
+                    to protect the input datas of users
+                </p>
+            </div>
+            <div class="str" data-aos="fade-up" data-aos-duration="1000">
+                <img src="{% static 'Home/images/responsive.png' %}" class="img-fluid strimg">
+                <h3>Responsive</h3>
+                <p>
+                    Our websites can be viewed using any smart devices with 
+                    different sizes of screen and user-friendly
+                </p>
+            </div>
+            <div class="str" data-aos="fade-up" data-aos-duration="1000">
+                <img src="{% static 'Home/images/tech.png' %}" class="img-fluid strimg">
+                <h3>Technology</h3>
+                <p>
+                    We will design your websites using latest technological ideas. 
+                    So your website will be more unique
+                </p>
+            </div>
+        </div>
+        <p></p>
+    </section>
+    <section id="mar2">
+        <div class="web" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="sub cap">Learning</h2>
+            <p class="cpera">
+                We are organizing special courses which can help for a bright future with the help of 
+                talented teachers and our courses are done through online for low cost considering studying 
+                eager of the student
+            </p>
+            
+            <a href="/class"><img src="{% static 'Home/images/arrow.png' %}" class="img-fluid strimg"></a>
+            <h4>available courses</h4>
+
+        </div>
+        
+    </section>
+
+    <br>
+    <div id="lstbr">
+        <h2>GEENII Solutions</h2>
+        <div id="lastbar">
+            <div class="fsection">
+                <h3>Services</h3>
+                <a href="" class="a">Web developing</a>
+                <a href="" class="a">Web Designing</a>
+                <a href="" class="a">Teaching</a>
+            </div>
+            <div class="fsection">
+                <h3>Social</h3>
+                <a href="" class="a">Facebook</a>
+                <a href="" class="a">Youtube</a>
+                <a href="" class="a">Twitter</a>
+                <a href="" class="a">Instagram</a>
+            </div>
+            <div class="fsection">
+                <h3>Contact</h3>
+                <a href="" class="a">WhatsApp</a>
+                <a href="" class="a">E-mail</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+     
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+#body{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:  #01B0D3;
+}
+#logo1{
+    margin: 30px;
+}
+#logo{
+    width: 150px;
+    height: 150px;
+}
+#pic{
+    width: 148px;
+    height: 148px;
+    
+}
+
+#navbar{
+    padding: 8px 20px;
+    background-color: #242333;
+    color: white;
+}
+#tlink{
+    color: white; 
+}
+
+#btn{
+    color: white;
+    height: 30px;
+    width: 25px;
+}
+#tlist:hover{
+    border-bottom: 2px solid #01B0D3;
+}
+
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    min-height: 60vh;
+}
+
+#apera{
+    max-width: 600px;
+    font-size: 1.3rem;
+    text-align: justify;
+        
+}
+
+.cap{
+    text-transform: uppercase;
+}
+
+#tlist{
+    margin-right: 30px;
+
+}
+
+
+
+
